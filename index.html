@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>A simple, accessible language switcher module</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <div class="container">
+
+    <h1>A simple, accessible language switcher module</h1>
+    <ul>
+      <li><a href="#about">About the switch</a></li>
+      <li><a href="#examples">Examples</a></li>
+      <li><a href="https://github.com/russmaxdesign/language-switcher">GitHub page</a></li>
+    </ul>
+
+    <h2 id="about">About the language switcher</h2>
+    <p>This language switcher module uses a simple radio button combination to
+    allow users to change language. Note: This does not include any scripting
+    to change languages.</p>
+
+    <h3>Accessibility</h3>
+    <ul>
+      <li>Uses standard semantic radio button elements including "id" and "for" values.</li>
+      <li>Uses "role" and "aria-labelledby" to assign additional information to the radio group.</li>
+      <li>Uses hidden information to provide additional meaning for screen reader users</li>
+      <li>Includes clear focus state for keyboard only users</li>
+    </ul>
+    <p><img src="assets/img/language.png" alt="Diagram showing all possible visual states of language switcher"></p>
+
+    <h3>Markup</h3>
+    <figure>
+<pre><code class="language-markup">&lt;div class="language" role="radiogroup" aria-labelledby="language-switcher1"&gt;
+  &lt;p class="hidden" id="language-switcher1"&gt;Choose a language for this website&lt;/p&gt;
+  &lt;div class="language__container--left language__container--fr"&gt;
+    &lt;input class="language__control" type="radio" id="language1-1" name="language-switch1"&gt;
+    &lt;label class="language__label" for="language1-1"&gt;
+      FR&lt;span class="hidden"&gt; Français&lt;/span&gt;
+    &lt;/label&gt;
+  &lt;/div&gt;
+  &lt;div class="language__container--right language__container--en"&gt;
+    &lt;input class="language__control" type="radio" id="language1-2" name="language-switch1"&gt;
+    &lt;label class="language__label" for="language1-2"&gt;
+      EN&lt;span class="hidden"&gt; English&lt;/span&gt;
+    &lt;/label&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </figure>
+
+
+    <h2 id="examples">Examples</h2>
+    <h3>Unstyled</h3>
+    <div role="radiogroup" aria-labelledby="language-switcher0">
+      <p id="language-switcher0">Choose a language for this website</p>
+      <div>
+        <input type="radio" id="language0-1" name="language-switch0">
+        <label for="language0-1">
+          FR<span> Français</span>
+        </label>
+      </div>
+      <div>
+        <input type="radio" id="language0-2" name="language-switch0">
+        <label for="language0-2">
+          EN<span> English</span>
+        </label>
+      </div>
+    </div>
+
+    <h3>Unchecked by default</h3>
+    <div class="language" role="radiogroup" aria-labelledby="language-switcher1">
+      <p class="hidden" id="language-switcher1">Choose a language for this website</p>
+      <div class="language__container--left language__container--fr">
+        <input class="language__control" type="radio" id="language1-1" name="language-switch1">
+        <label class="language__label" for="language1-1">
+          FR<span class="hidden"> Français</span>
+        </label>
+      </div>
+      <div class="language__container--right language__container--en">
+        <input class="language__control" type="radio" id="language1-2" name="language-switch1">
+        <label class="language__label" for="language1-2">
+          EN<span class="hidden"> English</span>
+        </label>
+      </div>
+    </div>
+
+    <h3>Checked by default</h3>
+    <div class="language" role="radiogroup" aria-labelledby="language-switcher2">
+      <p class="hidden" id="language-switcher2">Choose a language for this website</p>
+      <div class="language__container--left language__container--fr">
+        <input class="language__control" type="radio" id="language2-1" name="language-switch2">
+        <label class="language__label" for="language2-1">
+          FR<span class="hidden"> Français</span>
+        </label>
+      </div>
+      <div class="language__container--right language__container--en">
+        <input class="language__control" type="radio" id="language2-2" name="language-switch2" checked>
+        <label class="language__label" for="language2-2">
+          EN<span class="hidden"> English</span>
+        </label>
+      </div>
+    </div>
+
+    <p>See <a href="https://github.com/russmaxdesign/language-switcher/blob/master/LICENCE.md">Licence information</a> for use</p>
+  </div>
+  <script src="assets/js/prism.js"></script>
+</body>
+</html>
